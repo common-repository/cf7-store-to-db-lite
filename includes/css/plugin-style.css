@@ -1,0 +1,426 @@
+/* 
+ * Contact Form 7 Store To DB
+ * Since Version 1.0.0
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+/*
+* === Default css ===
+*/
+canvas {
+    border: 1px dotted red;
+}
+
+span.spinner.cf7stdb-view-wrap.is-active {
+    margin-top: -20px;
+}
+
+/*
+* === Main css ===
+*/
+
+
+.cf7stdb-header img{
+	display: block;
+	margin: 20px 0;
+}
+.cf7stdb-header h4{
+	font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    font-size: 1.75rem;
+    display: block;
+    line-height: 1.2;
+    margin: 15px 0;
+    letter-spacing: -0.02em;
+    color: #2e2e2e;
+    display: none;
+}
+
+.cd7stdb-inner-wrapper{
+	padding-top: 0;
+}
+
+.cd7stdb-inner-wrapper .metabox-holder{
+	padding-top: 0 !important;
+}
+.cd7stdb-header-title h3{
+	font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+    font-size: 1rem;
+    color: #404040;
+    position: relative;
+    margin-bottom: 30px;
+}
+.cd7stdb-header-title h3:after{
+	position: absolute;
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: #ea4b36;
+    left: 0;
+    bottom: -3px;
+}
+
+.cd7stdb-menu-option-wrapper .cd7stdb-menu-option-wrapper{
+    margin: 20px 20px 20px 5px;
+}
+
+.cd7stdb-wrapper .postbox{
+	margin-right: 20px;
+	padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+.cd7stdb-entry-report-filter-wrap{
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-justify-content: flex-start;
+	        justify-content: flex-start;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.cd7stdb-entry-report-filter-wrap .cd7stdb-option-inner-input i{
+	margin-right: 2px;
+	display: none;
+}
+.cd7stdb-option-inner-input{
+	display: flex;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-align-items: center;
+	        align-items: center;
+	margin-right: 20px;
+	width: 30%;
+}
+
+.cd7stdb-option-inner-input label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+a.cd7stdb-range-entry-clear{
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+a.cd7stdb-range-entry-clear:hover{
+	text-decoration: underline;
+}
+.cd7stdb-option-inner-input select,
+.cd7stdb-option-inner-input input{
+	width: 100%;
+	margin: 0 8px;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
+	outline: none;
+	min-height: 35px;
+}
+
+.cd7stdb-option-inner-input select{
+	background-image: url(../../images/select-arrow.png);
+    background-repeat: no-repeat !important;
+    background-position: right center !important;
+    position: relative;
+    -webkit-appearance: none;
+    background-color: #FFF;
+    background-position: right center;
+    background-repeat: no-repeat;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    line-height: normal;
+    padding: 0 5px;
+}
+
+.cd7stdb-submit-wrap{
+	display: flex;
+	margin-bottom: 30px;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+
+.cd7stdb-submit-wrap .button-primary{
+	background: #ea4b36;
+	background-color: #ea4b36;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	text-shadow: none;
+	border: 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	   -moz-transition: all 0.3s ease-in-out;
+	    -ms-transition: all 0.3s ease-in-out;
+	     -o-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+	min-height: 35px;
+	margin-right: 15px;
+}
+.cd7stdb-submit-wrap .button-primary:hover,
+.cd7stdb-submit-wrap .button-primary:active,
+.cd7stdb-submit-wrap .button-primary:focus{
+	background: #2e2e2e;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	border: 0;
+	outline: 0;
+}
+
+.cd7stdb-input-field-wrap h4{
+	font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 15px;
+    cursor: initial;
+}
+
+.cd7stdb-input-field-wrap h4:before{
+    content: '\f35a';
+    font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+	left: 0;
+	margin-right: 5px;
+}
+
+.cd7stdb-general-setting-field-wrap,
+.cd7stdb-input-field-wrap p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #404040;
+    font-weight: 400;
+}
+
+.cd7stdb-input-field-wrap p{
+	margin-bottom: 0;
+	position: relative;
+	padding-left: 10px;
+}
+
+.cd7stdb-input-field-wrap p:before{
+	position: absolute;
+	content: "*";
+	left: 0;
+	color: #ea4b36;	
+}
+
+.cd7stdb-general-setting-field-wrap .cd7stdb-input-field-wrap{
+	border-bottom: 1px solid #cecece;
+    padding-bottom: 15px;
+}
+
+.cd7stdb-post-specific-entry{
+	display: table;
+	width: 100%;
+	position: relative;
+	margin-bottom: 0;
+	margin-top: 18px;
+}
+.cd7stdb-post-specific-entry li{
+	float: left;
+	margin-right: 30px;
+}
+
+.cd7stdb-input-field input[type=text]{
+	min-width: 300px;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	-webkit-border-radius: 0;
+	        border-radius: 0;
+	outline: none;
+	min-height: 35px;
+}
+
+.post-type-cf7storetodbs .tablenav{
+	margin: 15px 0 5px;
+}
+
+.cd7stdb-menu-option-wrapper .cd7stdb-submit-wrap{
+	margin-top: 20px;
+}
+.post-type-cf7storetodbs .subsubsub{
+	margin-bottom: 15px;
+}
+.post-type-cf7storetodbs  .button, 
+.post-type-cf7storetodbs  .button-secondary{
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+.post-type-cf7storetodbs ul.subsubsub a.secondary-button,
+.post-type-cf7storetodbs ul.subsubsub a.secondary-button:focus{
+	line-height: normal;
+    padding: 0 10px;
+    height: auto;
+    background: #ea4b36;
+    color: #fff;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+h3.cd7stdb-secondary-header{
+	font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: #404040;
+    position: relative;
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+
+h3.cd7stdb-secondary-header:after{
+	position: absolute;
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: #ea4b36;
+    left: 0;
+    bottom: -6px;
+}
+
+.cd7stdb-entries-outer-wrap .cd7stdb-entries-inner-wrap:first-child h3.cd7stdb-secondary-header{
+	margin-top: 20px;
+}
+
+.cd7stdb-entries-outer-wrap .cd7stdb-input-field-wrap{
+	display: flex;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	padding: 15px 10px;
+    background: #efefef;
+	
+}
+
+.cd7stdb-entries-outer-wrap .cd7stdb-input-field-wrap:nth-child(odd){
+	background: #e8e8e8;
+}
+
+.cd7stdb-entries-outer-wrap .cd7stdb-input-field-wrap label{
+	font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+    margin-right: 15px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    letter-spacing: 0;
+    display: inline-block;
+    float: left;
+}
+
+.cd7stdb-entries-outer-wrap .cd7stdb-input-field-wrap .cd7stdb-input-field{
+	font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    letter-spacing: 0;
+}
+
+#cf7stdb_detail_disp_option{
+	padding-bottom: 50px;
+}
+.post-type-cf7storetodbs h1.wp-heading-inline {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    font-size: 1.75rem;
+    display: block;
+    line-height: 1.2;
+    margin: 15px 0;
+    letter-spacing: -0.02em;
+    color: #2e2e2e;
+    margin-bottom: 0;
+}
+
+.cd7stdb-submit-wrap .spinner{
+	margin: 0;
+	margin-top: 8px;
+	width: 76%;
+}
+
+.cd7stdb-input-field a{
+	text-decoration: none;
+}
+span.cf7stdb-stat-read{
+	text-transform: capitalize;
+}
+span.cf7stdb-stat-unread{
+	text-transform: capitalize;
+	color: #ea4b36;
+}
+@media only screen and (max-width: 768px) {
+
+.cd7stdb-entry-report-filter-wrap{
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-align-items: flex-start;
+	        align-items: flex-start;
+}
+
+.cd7stdb-option-inner-input label{
+	min-width: 130px;
+	text-align: right;
+}
+.cd7stdb-option-inner-input{
+	width: 60%;
+	margin-bottom: 15px;
+}
+}
+
+@media only screen and (max-width: 520px) {
+
+.cd7stdb-option-inner-input{
+	width: 100%;
+}
+.cd7stdb-submit-wrap{
+	text-align: center;
+}
+.cd7stdb-post-specific-entry li{
+	margin-bottom: 10px;
+}
+
+}
+
+.cf7stdb-primary-left-container{
+	width:70% !important;
+}
+.cf7stdb-container-sidebar {
+    width: 30% !important;
+}
+.cf7stdbl-col-three-third{
+	padding:10px;
+}
+.cf7stdbl-pro-version-update-button {
+    margin-bottom: 2px;
+    margin-top: -4px;
+}
+.cf72db-pro-version-update-button{
+	 background: rgb(45, 163, 13) !important;
+    color: #fff;
+    border-color: transparent;
+}
